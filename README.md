@@ -4,10 +4,10 @@ Este es un proyecto hecho con **Next.js (App Router)** que incluye:
 
 - Sitemap dinámico en `/api/sitemap`
 - Página principal con componentes
-- Blog con rutas dinámicas (`/blog/[slug]`)
+- Blog con artículos como páginas estáticas
 - Meta tags personalizados para SEO
-- robots.txt con link al sitemap
-- Verificado en Google Search Console
+- `robots.txt` con link al sitemap
+- Verificación con Google Search Console
 - Desplegado en [Render](https://render.com)
 
 ---
@@ -25,17 +25,17 @@ Este es un proyecto hecho con **Next.js (App Router)** que incluye:
 - 🏠 Home: [`/`](https://lab14-chalton.onrender.com/)
 
 ### Secciones estáticas
-- 📄 Blog (listado o sección): [`/blog`](https://lab14-chalton.onrender.com/blog)
+- 📄 Blog (sección): [`/blog`](https://lab14-chalton.onrender.com/blog)
 - 📞 Contacto: [`/contacto`](https://lab14-chalton.onrender.com/contacto)
 
-### Artículos del blog (rutas dinámicas)
+### Artículos del blog (páginas individuales)
 - 📝 Primer Artículo: [`/blog/primer-articulo`](https://lab14-chalton.onrender.com/blog/primer-articulo)
 - 📝 Segundo Artículo: [`/blog/segundo-articulo`](https://lab14-chalton.onrender.com/blog/segundo-articulo)
 
 ### Archivos especiales
 - 🤖 robots.txt: [`/robots.txt`](https://lab14-chalton.onrender.com/robots.txt)
 - 🗺️ Sitemap XML: [`/api/sitemap`](https://lab14-chalton.onrender.com/api/sitemap)
-- ✅ Verificación de Google: [`/google72720baf58ddfaf6.html`](https://lab14-chalton.onrender.com/google72720baf58ddfaf6.html)
+- ✅ Verificación Google Search Console: [`/google72720baf58ddfaf6.html`](https://lab14-chalton.onrender.com/google72720baf58ddfaf6.html)
 
 ---
 
@@ -44,7 +44,7 @@ Este es un proyecto hecho con **Next.js (App Router)** que incluye:
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repo.git
+git clone https://github.com/cha1ton/Lab14-DAWA.git
 cd tu-repo
 ```
 
