@@ -1,15 +1,7 @@
-//src/app/blog/[slug]/page.tsx
-
 import { notFound } from "next/navigation";
 import Head from "next/head";
 
-type Props = {
-  params: {
-    slug: string;
-  };
-};
-
-// Artículos simulados
+// Simulación de artículos (como si vinieran de un CMS o base de datos)
 const posts = [
   {
     slug: "primer-articulo",
@@ -31,20 +23,28 @@ const posts = [
   },
 ];
 
-// Genera rutas estáticas
+// ✅ Esta función permite generar rutas estáticas al hacer build
 export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-// Página principal del artículo
-export default function BlogPage({ params }: Props) {
+// ✅ Este es el tipo correcto que espera Next.js App Router
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
+export default function BlogPage({ params }: PageProps) {
   const post = posts.find((p) => p.slug === params.slug);
+
   if (!post) return notFound();
 
   return (
     <main className="p-6">
+      {/* Meta tags para SEO */}
       <Head>
         <title>{post.title} | Blog</title>
         <meta name="description" content={post.description} />
