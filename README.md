@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Mi App con Next.js + Sitemap + SEO
 
-## Getting Started
+Este es un proyecto hecho con **Next.js (App Router)** que incluye:
 
-First, run the development server:
+- Sitemap dinámico en `/api/sitemap`
+- Página principal con componentes
+- Blog con rutas dinámicas (`/blog/[slug]`)
+- Meta tags personalizados para SEO
+- robots.txt con link al sitemap
+- Verificado en Google Search Console
+- Desplegado en [Render](https://render.com)
+
+---
+
+## 🔗 Sitio en vivo
+
+**URL principal del sitio:**  
+👉 https://lab14-chalton.onrender.com
+
+---
+
+## 🌍 Rutas públicas del sitio
+
+### Página principal
+- 🏠 Home: [`/`](https://lab14-chalton.onrender.com/)
+
+### Secciones estáticas
+- 📄 Blog (listado o sección): [`/blog`](https://lab14-chalton.onrender.com/blog)
+- 📞 Contacto: [`/contacto`](https://lab14-chalton.onrender.com/contacto)
+
+### Artículos del blog (rutas dinámicas)
+- 📝 Primer Artículo: [`/blog/primer-articulo`](https://lab14-chalton.onrender.com/blog/primer-articulo)
+- 📝 Segundo Artículo: [`/blog/segundo-articulo`](https://lab14-chalton.onrender.com/blog/segundo-articulo)
+
+### Archivos especiales
+- 🤖 robots.txt: [`/robots.txt`](https://lab14-chalton.onrender.com/robots.txt)
+- 🗺️ Sitemap XML: [`/api/sitemap`](https://lab14-chalton.onrender.com/api/sitemap)
+- ✅ Verificación de Google: [`/google72720baf58ddfaf6.html`](https://lab14-chalton.onrender.com/google72720baf58ddfaf6.html)
+
+---
+
+## 🧪 ¿Cómo probar localmente?
+
+1. Clona el repositorio:
+
+```bash
+git clone https://github.com/tu-usuario/tu-repo.git
+cd tu-repo
+```
+
+2. Instala dependencias:
+
+```bash
+npm install
+```
+
+3. Inicia el servidor:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Abre http://localhost:3000 en el navegador.
