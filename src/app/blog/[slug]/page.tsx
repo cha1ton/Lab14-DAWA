@@ -1,9 +1,15 @@
-// src/app/blog/[slug]/page.tsx
+//src/app/blog/[slug]/page.tsx
 
 import { notFound } from "next/navigation";
 import Head from "next/head";
 
-// Artículos simulados como si vinieran de una base de datos o CMS
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+// Artículos simulados
 const posts = [
   {
     slug: "primer-articulo",
@@ -25,29 +31,30 @@ const posts = [
   },
 ];
 
-// Permite que Next.js genere rutas estáticas en build
+// Genera rutas estáticas
 export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-// Componente principal de la página
-export default function BlogPage({ params }: { params: { slug: string } }) {
+// Página principal del artículo
+export default function BlogPage({ params }: Props) {
   const post = posts.find((p) => p.slug === params.slug);
-
   if (!post) return notFound();
 
   return (
     <main className="p-6">
-      {/* Meta tags dinámicos */}
       <Head>
         <title>{post.title} | Blog</title>
         <meta name="description" content={post.description} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.description} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`https://lab14-chalton.onrender.com/blog/${post.slug}`} />
+        <meta
+          property="og:url"
+          content={`https://lab14-chalton.onrender.com/blog/${post.slug}`}
+        />
       </Head>
 
       <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
