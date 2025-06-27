@@ -1,6 +1,6 @@
 // src/app/api/sitemap/route.ts
 
-const BASE_URL = "https://mi-sitio.com";
+const BASE_URL = "https://lab14-chalton.onrender.com";
 
 // Simula que esto viene de un CMS o BD
 async function getDynamicRoutes() {
